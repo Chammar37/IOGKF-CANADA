@@ -1,3 +1,4 @@
+package backend;
 
 public class dojoloc{
     String province;

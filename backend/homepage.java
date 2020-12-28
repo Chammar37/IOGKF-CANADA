@@ -1,3 +1,5 @@
+package backend;
+
 public class homepage {
     String frontPageText;
 
