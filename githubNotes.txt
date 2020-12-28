@@ -1,0 +1,16 @@
+add origin using: git remote add origin "http url"
+then remote set-url using: git remote set-url origin "http url"
+
+Pull Procedure
+git pull origin main *to pull/merge files*
+
+
+Push procedure
+git status *to see modified/added/changed files*
+git add . *to add any changed/added files to commit*
+git commit -m "message" *commit files for next push*
+git push origin main *push commit files into main branch , not sure what origin is*
+
+
+Other commands
+git show-ref *show reference info*
