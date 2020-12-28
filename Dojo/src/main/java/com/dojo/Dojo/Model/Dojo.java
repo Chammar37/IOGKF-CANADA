@@ -1,5 +1,7 @@
 package com.dojo.Dojo.Model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Dojo {
     private String name;
     private String province;
@@ -8,6 +10,10 @@ public class Dojo {
     private String ChiefInstruc;
     private String Phone;
     private String email;
+
+    public Dojo (@JsonProperty("name") String name) {
+        this.name = name;
+    }
 
     public String getName() {
         return name;
