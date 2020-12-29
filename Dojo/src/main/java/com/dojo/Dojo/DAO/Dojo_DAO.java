@@ -14,4 +14,6 @@ public interface Dojo_DAO {
     int insertDojo (Dojo dojo);
 
     int deleteDojo(String name, String city);
+
+    int updateDojo (String name, String city, Dojo dojo);
 }

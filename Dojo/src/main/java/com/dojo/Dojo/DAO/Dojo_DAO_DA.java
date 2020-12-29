@@ -39,5 +39,18 @@ public class Dojo_DAO_DA implements Dojo_DAO {
        }
        return 0;
     }
+
+    @Override
+    public int updateDojo(String name, String city, Dojo dojo) {
+        return getDojo(name, city).map(d -> {
+            int index = DB.indexOf(dojo);
+            if (index >= 0) {
+                DB.set(index, dojo);
+                return 1;
+            }
+            return 0;
+        })
+       .orElse(0);
+    }
     
 }

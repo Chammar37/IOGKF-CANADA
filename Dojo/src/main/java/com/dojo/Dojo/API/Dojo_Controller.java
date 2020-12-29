@@ -11,10 +11,10 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.bind.annotation.RequestParam;
 
 
 @RequestMapping("api/dojo")
@@ -47,5 +47,9 @@ public class Dojo_Controller {
     public void deleteDojo(@PathVariable("name") String name, @PathVariable("city") String city) {
         this.services.deleteDojo(name, city);
     }
-        
+       
+    @PutMapping(path = "{name}/{city}")
+    public int updateDojo(@PathVariable("name") String name, @PathVariable("city") String city, @RequestBody Dojo dojo) {
+        return this.services.updateDojo(name, city, dojo);
+    }
 }

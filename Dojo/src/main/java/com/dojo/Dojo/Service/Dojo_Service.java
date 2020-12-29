@@ -35,5 +35,9 @@ public class Dojo_Service {
     public int deleteDojo(String name, String city) {
         return dojoDAO.deleteDojo(name, city);
     }
+
+    public int updateDojo (String name, String city, Dojo dojo) {
+        return dojoDAO.updateDojo(name, city, dojo);
+    }
     
 }
