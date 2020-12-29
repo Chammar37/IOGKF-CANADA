@@ -7,7 +7,7 @@ import com.dojo.Dojo.Model.Dojo;
 
 import org.springframework.stereotype.Repository;
 
-@Repository("data_access")
+@Repository("accessData")
 public class Dojo_DAO_DA implements Dojo_DAO {
 
     private static List<Dojo> DB = new ArrayList<>();

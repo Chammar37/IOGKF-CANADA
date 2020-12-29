@@ -13,7 +13,7 @@ public class Dojo_Service {
     private final Dojo_DAO dojoDAO;
 
     @Autowired
-    public Dojo_Service(@Qualifier("data_access") Dojo_DAO dao) {
+    public Dojo_Service(@Qualifier("accessData") Dojo_DAO dao) {
         this.dojoDAO = dao;
     }
 
