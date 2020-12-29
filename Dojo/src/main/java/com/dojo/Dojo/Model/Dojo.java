@@ -7,7 +7,7 @@ public class Dojo {
     private String province;
     private String city;
     private String address;
-    private String ChiefInstruc;
+    private String ChiefInstructor;
     private String Phone;
     private String email;
 
@@ -48,11 +48,11 @@ public class Dojo {
     }
 
     public String getChiefInstruc() {
-        return ChiefInstruc;
+        return ChiefInstructor;
     }
 
     public void setChiefInstruc(String chiefInstruc) {
-        ChiefInstruc = chiefInstruc;
+        ChiefInstructor = chiefInstruc;
     }
 
     public String getPhone() {
