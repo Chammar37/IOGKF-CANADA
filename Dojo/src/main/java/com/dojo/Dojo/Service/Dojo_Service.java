@@ -1,5 +1,7 @@
 package com.dojo.Dojo.Service;
 
+import java.util.List;
+
 import com.dojo.Dojo.DAO.Dojo_DAO;
 import com.dojo.Dojo.Model.Dojo;
 
@@ -13,11 +15,15 @@ public class Dojo_Service {
     private final Dojo_DAO dojoDAO;
 
     @Autowired
-    public Dojo_Service(@Qualifier("accessData") Dojo_DAO dao) {
+    public Dojo_Service(@Qualifier("dojo_data") Dojo_DAO dao) {
         this.dojoDAO = dao;
     }
 
     public int insertDojo (Dojo dojo) {
         return dojoDAO.insertDojo(dojo);
+    }
+
+    public List<Dojo> getAllDojo() {
+        return dojoDAO.allDojos();
     }
 }
